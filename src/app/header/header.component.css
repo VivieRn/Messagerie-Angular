@@ -1,0 +1,17 @@
+.header {
+  border-bottom: 3px solid black;
+  background-color: var(--couleur1);
+  color: aliceblue;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+a {
+  color: aliceblue;
+}
+a:hover {
+  text-decoration: underline;
+  color: aliceblue;
+}

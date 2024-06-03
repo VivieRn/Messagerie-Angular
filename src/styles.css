@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+:root {
+  --couleur1: #201066; /* Header */
+  --couleur2: #8698f6; /* Body + New Messages */
+  --couleur3: #e8ecff; /* Accueil + Messages List + Inconnu*/
+  --couleur4: rgb(187, 187, 245); /* Actives Peoples */
+  --couleur5: rgb(19, 19, 165); /* nom +main-message */
+  --couleur6: #b8c5fc; /* message */
+  --alert: #e06a74;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--couleur2);
+}
