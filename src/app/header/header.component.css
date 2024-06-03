@@ -10,8 +10,8 @@ h1 {
 
 a {
   color: aliceblue;
+  padding: 3px;
 }
 a:hover {
-  text-decoration: underline;
-  color: aliceblue;
+  background-color: aliceblue;
 }
