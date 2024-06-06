@@ -11,15 +11,18 @@ import { HeaderComponent } from '../header/header.component';
   imports: [CommonModule, HeaderComponent],
   template: `
   <app-header></app-header>
-<div class="active-peoples position-fixed top-10vh start-0 w-25 p-3" style="height: calc(100vh - 10vh);">
-  <h2>Personnes actives :</h2>
-  <ul *ngFor="let message of messages">
-    <li><span class="fs-4">{{message.from}}</span></li>
+  <div class="active-peoples position-fixed top-10vh start-0 w-25 p-3" style="height: calc(100vh - 10vh);">
+  <h2 class="res fs-5 fs-sm-4 text-center text-sm-start">Personnes actives :</h2>
+  <ul class="list-unstyled">
+    <li *ngFor="let message of messages" class="p-2">
+      <span class="fs-6 fs-md-5">{{message.from}}</span>
+    </li>
   </ul>
   <div *ngIf="messages.length===0">
     Aucune personne à afficher.
   </div>
 </div>
+
 
 
   `,

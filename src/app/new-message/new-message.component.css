@@ -2,12 +2,20 @@
   padding: 1em;
   background-color: var(--couleur2);
   border-top: 3px solid black;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  max-height: 40vh;
+  box-sizing: border-box;
+  max-width: 75%;
+  overflow-y: auto;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  margin: 1em;
 }
 
 .alert {
@@ -18,4 +26,19 @@ form {
   margin-top: 5px;
   border-radius: 7px;
   width: 25%;
+}
+
+@media (max-width: 576px) {
+  .alert {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  form {
+    margin: 0;
+  }
+  .resN {
+    font-size: 1em !important;
+  }
 }

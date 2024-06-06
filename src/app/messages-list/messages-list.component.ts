@@ -9,9 +9,9 @@ import { Subject, takeUntil } from 'rxjs';
   standalone: true,
   imports: [CommonModule],
   template: `
-  <div class="messages-list position-fixed top-10vh end-0 w-75 p-3 overflow-auto" style="height: calc(100vh - 10vh - 33.7vh);">
-  <h2>Historique des messages :</h2>
-  <div>
+  <div class="messages-list">
+  <h2 class="resM text-md text-center text-sm-start">Historique des messages :</h2>
+  <div class="messages-container">
     <div class="message p-2 rounded mb-3" *ngFor="let message of messages">
       <p><span class="fw-bold">{{message.from}}</span> a écrit :</p>
       <div class="main-message">
@@ -26,9 +26,6 @@ import { Subject, takeUntil } from 'rxjs';
     </div>
   </div>
 </div>
-
-
-
   `,
   styleUrl: './messages-list.component.css'
 })

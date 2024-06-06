@@ -10,29 +10,27 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   standalone: true,
   imports: [FormsModule, ReactiveFormsModule, CommonModule],
   template: `
-  <div class="new-message position-fixed bottom-0 end-0 w-75 p-3">
-  <h2>Nouveau message :</h2>
+  <div class="new-message">
+  <h2 class="resN text-md text-center text-sm-start">Nouveau message :</h2>
   <form [formGroup]="angForm" class="d-flex flex-column m-3">
     <label for="from" class="form-label">De :</label>
     <input type="text" id="from" formControlName="from" [ngClass]="{'form-control': true, 'is-invalid': nomInvalide()}" class="form-control" />
 
     <label for="message" class="form-label">Message :</label>
     <textarea id="message" formControlName="message" [ngClass]="{'form-control': true, 'is-invalid': textInvalide()}" class="form-control"></textarea>
-    <div *ngIf="nomInvalide()" class="alert alert-danger">
+    <div *ngIf="nomInvalide()" class="alert alert-danger text-center">
       Le nom est obligatoire !
     </div>
-    <div *ngIf="textInvalide()" class="alert alert-danger">
+    <div *ngIf="textInvalide()" class="alert alert-danger text-center">
       Le message est obligatoire !
     </div>
+
     <div class="d-flex justify-content-around mt-3">
       <input type="button" value="Valider" (click)="onClickValider()" class="btn btn-success" [disabled]="problemeValidation()"/>
       <input type="button" value="Annuler" (click)="onClickAnnuler()" class="btn btn-danger"/>
     </div>
   </form>
 </div>
-
-
-
   `,
   styleUrls: ['./new-message.component.css']
 })

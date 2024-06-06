@@ -6,3 +6,14 @@ span {
   font-size: 1.4em;
   color: var(--couleur5);
 }
+@media (max-width: 500px) {
+  .res {
+    font-size: 1em !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .res {
+    font-size: 0.8em !important;
+  }
+}
